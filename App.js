@@ -3,14 +3,17 @@
  * https://github.com/facebook/react-native
  * @flow
  */
-
+'use strict';
 import React, { Component } from 'react';
 import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  Navigator
 } from 'react-native';
+import ImageHandler from './src/ar_prototype/ImageHandler';
+import SearchPage from './SearchPage';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -32,6 +35,7 @@ export default class App extends Component<{}> {
         <Text style={styles.instructions}>
           {instructions}
         </Text>
+        <ImageHandler />
       </View>
     );
   }
